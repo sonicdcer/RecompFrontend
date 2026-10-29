@@ -202,8 +202,9 @@ namespace recompinput {
 
     void profiles::set_input_profile_for_player(int player_index, int profile_index, InputDevice device) {
         switch (device) {
-        case InputDevice::Controller:
+            case InputDevice::Controller:
             players_input_profile_indices[player_index].first = profile_index;
+            players_input_profile_indices[player_index].second = -1;
             break;
         case InputDevice::Keyboard:
             players_input_profile_indices[player_index].second = profile_index;
